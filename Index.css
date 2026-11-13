@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --navy:#131E4A;
+  --navy-2:#16204A;
+  --navy-3:#0B1230;
+  --mist:#E8E8E6;
+  --mist-2:#D8D8D6;
+  --line:#9AA0A8;
+  --white:#FFFFFF;
+  --ink:#172033;
+  --muted:#5B6472;
+  --gold:#E8B33A;
+  --surface:#FFFFFF;
+  --surface-2:#F4F4F2;
+  --text:#172033;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --surface:#101736; --surface-2:#18204A; --text:#F2F3F5; --muted:#C2C7D2; --mist:#202A55; --mist-2:#2A3560; }
+}
+*{box-sizing:border-box}
+h1,h2,h3{overflow-wrap:anywhere}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface);color:var(--text);font-family:'Barlow',system-ui,sans-serif}
+.font-display{font-family:'Oswald',system-ui,sans-serif}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-weight:700;font-size:12px;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:13px;font-weight:600;transition:.22s;text-decoration:none;cursor:pointer}
+.btn:hover{background:#fff;color:var(--navy)}
+.btn-light{background:#fff;color:var(--navy);border-color:#fff}
+.btn-light:hover{background:transparent;color:#fff}
+.btn-ghost{background:transparent;color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.card{transition:transform .25s, box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 45px rgba(19,30,74,.16)}
+.chip{padding:9px 16px;border:1px solid #C9CDD2;background:#fff;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.navlink{position:relative;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#24304A;text-decoration:none;padding:8px 2px}
+.navlink:hover,.navlink.active{color:var(--navy)}
+.navlink.active:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold)}
+.drop{position:relative}
+.drop-menu{position:absolute;top:100%;left:-12px;min-width:250px;background:#fff;border-top:3px solid var(--gold);box-shadow:0 18px 40px rgba(0,0,0,.18);padding:10px 0;display:none;z-index:50}
+.drop:hover .drop-menu,.drop:focus-within .drop-menu{display:block}
+.drop-menu a{display:block;padding:12px 20px;color:#24304A;text-decoration:none;font-weight:600;font-size:14px}
+.drop-menu a:hover{background:var(--mist);color:var(--navy)}
+.img-ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#1B2A66 0%,#131E4A 48%,#3B4B86 100%);color:#fff;display:flex;align-items:flex-end}
+.img-ph:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:34px 34px;opacity:.55}
+.img-ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,11,30,.82))}
+.img-ph.alt{background:linear-gradient(135deg,#6E7683,#394054 55%,#131E4A)}
+.img-ph.warm{background:linear-gradient(135deg,#8A6A2F,#C09A3E 55%,#131E4A)}
+.img-ph.cool{background:linear-gradient(135deg,#243A5E,#48678F 55%,#0B1230)}
+.ph-label{position:relative;z-index:2;padding:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:13px;line-height:1.4}
+.ph-big{font-size:44px;line-height:.95;font-weight:700}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:none}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;pointer-events:none}
+.hero-slide.active{opacity:1;pointer-events:auto}
+/* FAQ — fluxo normal: cada item empurra o próximo para baixo. Sem altura
+   fixa, sem overflow que corte texto e sem posicionamento absoluto. */
+.faq-section{width:100%;max-width:100%;overflow-x:clip;box-sizing:border-box}
+.faq-list{width:100%;max-width:100%;overflow-x:clip;box-sizing:border-box}
+.faq-item{display:block;position:static;width:100%;max-width:100%;height:auto;min-height:0;overflow:visible;box-sizing:border-box}
+.faq-question{width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;text-align:left;box-sizing:border-box}
+.faq-question > span:first-child{flex:1 1 auto;min-width:0;white-space:normal;word-wrap:break-word;overflow-wrap:anywhere}
+.faq-body{display:none;position:static;width:100%;height:auto;min-height:0;overflow:visible;box-sizing:border-box}
+.faq-item.open .faq-body{display:block}
+.faq-answer{display:block;width:100%;max-width:100%;white-space:normal;word-wrap:break-word;overflow-wrap:anywhere;box-sizing:border-box;line-height:1.6}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-icon{flex:0 0 auto;transition:transform .25s;position:static}
+details{display:block;width:100%;max-width:100%;height:auto;min-height:0;position:static;overflow:visible;box-sizing:border-box}
+details > summary{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;width:100%;text-align:left;box-sizing:border-box;cursor:pointer}
+details > summary > *:first-child{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+details > div,details > p{display:block;width:100%;white-space:normal;word-wrap:break-word;overflow-wrap:anywhere;box-sizing:border-box;line-height:1.6}
+.field{width:100%;padding:14px 15px;border:1px solid #CBD0D8;background:#fff;color:#172033;outline:none;font-family:inherit}
+.field:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(19,30,74,.12)}
+.field.err{border-color:#C0392B}
+input,select,textarea{font-size:16px}
+@media(max-width:768px){.ph-big{font-size:32px}
+.faq-section{padding-left:16px;padding-right:16px}
+.faq-section > div{padding-left:0;padding-right:0;max-width:100%}
+.faq-list{max-width:100%}
+.faq-item{max-width:100%}
+.faq-question{padding:16px}
+.faq-question > span:first-child{font-size:16px;line-height:1.4}
+.faq-body{padding:0}
+.faq-answer{padding:0 16px 16px;font-size:15px;line-height:1.6}
+.faq-icon{font-size:24px;line-height:1}
+.faq-section *, .faq-list *{max-width:100%;box-sizing:border-box}
+}
