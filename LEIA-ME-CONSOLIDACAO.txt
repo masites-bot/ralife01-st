@@ -1,0 +1,35 @@
+RALIF ENGENHARIA — PACOTE CONSOLIDADO
+
+Conteúdo reunido a partir da base do site e dos arquivos HTML enviados nesta conversa.
+
+O que foi feito:
+- Menu principal e rodapé padronizados nas páginas de artigos conforme o template atual do blog (blog.html), que acompanha a navegação/rodapé usados pelo site index.
+- Metadados SEO individuais: title, description, canonical e Open Graph, com descrição derivada do título e da abertura real de cada artigo.
+- Textos alternativos (alt) adicionados às imagens sem descrição.
+- Imagens locais fornecidas inseridas apenas nas páginas com correspondência temática clara; não foram inventadas fotografias.
+- Duplicatas editoriais evidentes convertidas em redirecionamentos canônicos para uma versão principal, preservando os endereços antigos para evitar links quebrados.
+- Links internos para os arquivos duplicados atualizados para as versões principais.
+
+Duplicatas reunidas (alias -> página principal):
+- Artigo-64-Data-Centers.html -> Artigo-106-Data-Centers.html
+- Artigo-100-Aeroportos.html -> Artigo-56-Aeroportos.html
+- Artigo-104-Igrejas.html -> Artigo-133-Igrejas.html
+- Artigo-55-Museus.html -> Artigo-134-Museus.html
+- Artigo-103-Museus.html -> Artigo-134-Museus.html
+- Artigo-81-Caixas-Dagua.html -> Artigo-82-Caixas-Dagua.html
+- Artigo-74-Escolas.html -> Artigo-132-Escolas.html
+- Artigo-98-Escolas.html -> Artigo-132-Escolas.html
+- Artigo-62-Estadios.html -> Artigo-137-Estadios.html
+- Artigo-76-Pontes.html -> Artigo-119-Pontes.html
+- Artigo-63-Hoteis.html -> Artigo-128-Hoteis.html
+- Artigo-57-Shopping.html -> Artigo-99-Shoppings.html
+- Artigo-47-Lavanderias.html -> Artigo-112-Lavanderias.html
+
+Limitações e pontos de atenção:
+- Não foi recebido um arquivo Artigo-129; a sequência recebida salta do 128 para o 130.
+- O acervo local contém poucas imagens de projeto; as demais páginas permanecem sem imagem temática porque não havia fotografia/ilustração correspondente fornecida.
+- O pacote não inclui todos os recursos externos referenciados em links do site, nem páginas que não foram entregues (por exemplo, páginas legais ou contato, se não estiverem presentes no diretório).
+- As referências normativas e afirmações técnicas presentes nos artigos foram preservadas em vez de serem tratadas como validação normativa; recomenda-se revisão por responsável técnico antes da publicação.
+- Canonicals usam o domínio público projetodeimpermeabilizacao.blog.br e o nome de cada arquivo HTML.
+
+- Endereços antigos referenciados por links, mas sem o HTML original no material recebido, foram mantidos como páginas informativas sem indexação (noindex), apontando para o índice do blog; não foi inventado conteúdo para esses artigos.

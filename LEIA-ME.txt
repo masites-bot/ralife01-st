@@ -1,0 +1,63 @@
+PASTA OFICIAL — SITE RALIF ENGENHARIA (versão atualizada)
+=========================================================
+Data da pasta: 15/11/2026
+
+Esta é a pasta com TODOS os arquivos atualizados até agora.
+A partir daqui, para falar de uma página, é só dizer o nome
+do arquivo (ex.: "a página de Piscinas" ou
+"projetos-impermeabilizacao-piscinas.html") que eu abro
+direto daqui, sem você precisar reenviar nada.
+
+O QUE ESTÁ DENTRO
+-----------------
+home.html
+  Página principal (slides, projetos, clientes).
+  Última versão: com clientes, slide legível, projetos
+  visíveis e botão do slide corrigido.
+  OBS: a Home é um arquivo de artefato — o rodapé cinza
+  ainda não foi aplicado nela. Se quiser, aplico na
+  próxima rodada.
+
+projetos-impermeabilizacao-*.html (15 páginas)
+  01 Lajes de Cobertura | 02 Paredes de Contenção |
+  03 Piscinas | 04 Caixas d'água e Reservatórios |
+  05 Fundação | 06 Jardins Suspensos | 07 Alicerces |
+  08 Terraços e Áreas de Lazer | 09 Banheiros e Áreas
+  Molhadas | 10 Garagens e Estacionamentos | 11 Cozinhas |
+  12 Peitorais e Esquadrias de Janelas | 13 Pátios |
+  14 Sacadas e Varandas | + Subsolos
+  Todas com: menu padrão (submenu Projetos), rodapé
+  cinza e CSS corrigido (fonte via <link>, foco visível,
+  movimento reduzido).
+
+blog.html + Artigo-*.html (10 páginas)
+  Blog + 9 artigos (Piscinas, Pisos, Tipos, Cosméticos,
+  Bebidas, Tabaco, Brinquedos, Embalagens, Eletrônicos).
+  Todas com: menu padrão (Blog ativo), rodapé cinza e
+  CSS corrigido.
+
+Index-atualizado.css
+  CSS revisado (sem modo escuro, sem duplicatas,
+  sem fundo branco no rodapé).
+
+logo_01.png
+  Logo usado nas páginas.
+
+O QUE AINDA NÃO ESTÁ AQUI
+-------------------------
+- contato.html, termos.html e privacidade.html:
+  são linkados pelas páginas, mas você ainda não
+  enviou para padronizar. Quando enviar, entram aqui.
+- Home-14-projetos.html (arquivo único com os 14
+  projetos): versão antiga, substituída pelas 15
+  páginas separadas. Não está na pasta para não
+  duplicar conteúdo.
+
+COMO USAR DAQUI PRA FRENTE
+--------------------------
+1. Para subir no servidor/GitHub: envie o conteúdo
+   desta pasta (todos os arquivos juntos).
+2. Para trabalhar numa página: diga o nome do arquivo
+   ou o tema (ex.: "Piscinas") que eu abro daqui.
+3. Se começar uma conversa nova: envie este zip de
+   novo que eu recupero tudo.
