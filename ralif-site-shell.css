@@ -1,0 +1,73 @@
+/* RALIF — menu superior e rodapé oficiais. Espelhados no Index.html. Não alterar sem autorização. */
+#ralif-site-header,#ralif-site-header *{box-sizing:border-box}
+#ralif-site-header{position:sticky;top:0;z-index:50;width:100%;background:#fff;border-bottom:1px solid #D8D8D6;color:#172033;font-family:Barlow,Arial,sans-serif}
+#ralif-site-header a{color:inherit;text-decoration:none}
+#ralif-site-header .ralif-header-main{width:100%;max-width:1200px;height:90px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+#ralif-site-header .ralif-brand{display:flex;align-items:center;flex:0 0 auto}
+#ralif-site-header .ralif-brand img{display:block;width:auto;height:58px;max-width:210px;object-fit:contain}
+#ralif-site-header .ralif-desktop-nav{display:none;align-items:center;gap:28px;min-width:0}
+#ralif-site-header .ralif-navlink{position:relative;display:inline-flex;align-items:center;gap:5px;padding:8px 2px;color:#24304A;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+#ralif-site-header .ralif-navlink:hover,#ralif-site-header .ralif-navlink:focus-visible,#ralif-site-header .ralif-navlink.is-active,#ralif-site-header .ralif-navlink[aria-current="page"]{color:#131E4A}
+#ralif-site-header .ralif-navlink.is-active:after,#ralif-site-header .ralif-navlink[aria-current="page"]:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#E8B33A}
+#ralif-site-header .ralif-chevron{font-size:15px;line-height:1}
+#ralif-site-header .ralif-drop{position:relative;display:flex;align-items:center}
+#ralif-site-header .ralif-drop-menu{position:absolute;top:100%;left:-12px;display:none;min-width:250px;width:250px;max-width:90vw;padding:10px 0;background:#fff;border-top:3px solid #E8B33A;box-shadow:0 18px 40px rgba(0,0,0,.18);z-index:100;column-count:1;column-gap:0}
+#ralif-site-header .ralif-drop:hover>.ralif-drop-menu,#ralif-site-header .ralif-drop:focus-within>.ralif-drop-menu{display:block}
+#ralif-site-header .ralif-drop-menu a{display:block;width:100%;padding:12px 20px;color:#24304A;text-decoration:none;font-family:Barlow,Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:0;white-space:normal;break-inside:avoid}
+#ralif-site-header .ralif-drop-menu a:hover,#ralif-site-header .ralif-drop-menu a:focus-visible{background:#E8E8E6;color:#131E4A}
+#ralif-site-header .ralif-drop-menu-wide{min-width:560px;width:560px;column-count:2;column-gap:0}
+#ralif-site-header .ralif-drop-menu-wide a:first-child{column-span:all;background:#E8E8E6}
+#ralif-site-header .ralif-head-actions{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+#ralif-site-header .ralif-header-btn{display:none;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border:1.5px solid #131E4A;background:#131E4A;color:#fff;font-family:Oswald,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:background .22s,color .22s}
+#ralif-site-header .ralif-header-btn:hover{background:#fff;color:#131E4A}
+#ralif-site-header .ralif-menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;width:42px;height:42px;padding:9px;border:1px solid #D8D8D6;background:#fff;color:#131E4A;cursor:pointer}
+#ralif-site-header .ralif-menu-toggle span{display:block;width:20px;height:2px;background:#131E4A}
+#ralif-site-header .ralif-contact-band{display:none;background:#131E4A;color:#fff}
+#ralif-site-header .ralif-contact-inner{width:100%;max-width:1200px;min-height:36px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;line-height:1.3;letter-spacing:.025em}
+#ralif-site-header .ralif-drawer[hidden]{display:none!important}
+#ralif-site-header .ralif-drawer{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.5)}
+#ralif-site-header .ralif-drawer-panel{position:absolute;top:0;right:0;width:86%;max-width:360px;height:100%;padding:24px;background:#fff;color:#172033;overflow-y:auto;box-shadow:-12px 0 32px rgba(0,0,0,.15)}
+#ralif-site-header .ralif-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+#ralif-site-header .ralif-drawer-head img{display:block;height:40px;width:auto;max-width:190px;object-fit:contain}
+#ralif-site-header .ralif-drawer-close{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:0;background:transparent;color:#131E4A;font-size:30px;line-height:1;cursor:pointer}
+#ralif-site-header .ralif-mobile-links{display:grid;gap:0}
+#ralif-site-header .ralif-mobile-links a{display:block;padding:12px 0;border-bottom:1px solid #E8E8E6;color:#131E4A;font-size:14px;font-weight:700;letter-spacing:.025em;text-transform:uppercase}
+#ralif-site-header .ralif-mobile-projects-title{margin:20px 0 4px;color:#5B6472;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+#ralif-site-header .ralif-mobile-projects{display:grid;gap:0}
+#ralif-site-header .ralif-mobile-projects a{display:block;padding:8px 0 8px 12px;border-bottom:1px solid #EDEDED;color:#131E4A;font-size:13px;font-weight:600}
+#ralif-site-header .ralif-mobile-cta{display:flex;align-items:center;justify-content:center;width:100%;margin-top:24px;padding:14px 16px;border:1.5px solid #131E4A;background:#131E4A;color:#fff;font-family:Oswald,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+#ralif-site-header .ralif-mobile-cta-secondary{margin-top:12px;background:#fff;color:#131E4A}
+#ralif-site-header .ralif-mobile-contact-text{margin:20px 0 0;color:#5B6472;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+body.ralif-menu-open{overflow:hidden}
+#ralif-site-header a:focus-visible,#ralif-site-header button:focus-visible{outline:3px solid #E8B33A;outline-offset:3px}
+#ralif-site-footer,#ralif-site-footer *{box-sizing:border-box}
+#ralif-site-footer{display:block;width:100%;margin:0;background:#0B1230;color:#fff;font-family:Barlow,Arial,sans-serif}
+#ralif-site-footer a{color:inherit;text-decoration:none}
+#ralif-site-footer a:hover{color:#E8B33A;text-decoration:none}
+#ralif-site-footer .ralif-footer-grid{width:100%;max-width:1200px;margin:0 auto;padding:64px 20px;display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:start}
+#ralif-site-footer .ralif-footer-grid>div{min-width:0}
+#ralif-site-footer .ralif-footer-logo{display:block;width:100%;max-width:290px;max-height:80px;height:auto;object-fit:contain;object-position:left center;background:#fff;padding:8px;border-radius:4px}
+#ralif-site-footer p{margin:20px 0 0;color:rgba(255,255,255,.75);font-size:14px;line-height:1.5rem;overflow-wrap:anywhere}
+#ralif-site-footer h3{margin:0;color:#fff;font-family:Oswald,Arial,sans-serif;font-size:18px;font-weight:400;line-height:1.35;letter-spacing:.1em;text-transform:uppercase}
+#ralif-site-footer .ralif-footer-bar{display:block;width:40px;height:3px;margin:16px 0;background:#E8B33A}
+#ralif-site-footer .ralif-footer-links{display:grid;gap:12px;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5}
+#ralif-site-footer .ralif-footer-links a{display:inline-block;max-width:100%;overflow-wrap:anywhere}
+#ralif-site-footer .ralif-footer-location{margin:0;color:rgba(255,255,255,.8)}
+#ralif-site-footer .ralif-footer-subtitle{margin-top:32px}
+#ralif-site-footer .ralif-footer-social{display:flex;flex-wrap:wrap;gap:12px}
+#ralif-site-footer .ralif-footer-social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);font-size:18px;font-weight:700}
+#ralif-site-footer .ralif-footer-social a:hover{background:#fff;color:#131E4A}
+#ralif-site-footer .ralif-footer-social-label{margin-top:16px;color:rgba(255,255,255,.7);font-size:14px}
+#ralif-site-footer .ralif-footer-whatsapp{display:inline-flex;align-items:center;justify-content:center;max-width:100%;margin-top:20px;padding:12px 16px;background:#25D366;color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;overflow-wrap:anywhere}
+#ralif-site-footer .ralif-footer-whatsapp:hover{background:#1fb95a;color:#fff}
+#ralif-site-footer .ralif-footer-small-links{margin-top:16px;color:rgba(255,255,255,.6);font-size:12px}
+#ralif-site-footer .ralif-footer-small-links a{text-decoration:underline}
+#ralif-site-footer .ralif-footer-bottom{border-top:1px solid rgba(255,255,255,.15)}
+#ralif-site-footer .ralif-footer-bottom-inner{width:100%;max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;color:rgba(255,255,255,.6);font-size:12px}
+#ralif-site-footer .ralif-footer-bottom-links{display:flex;gap:20px;flex-wrap:wrap}
+#ralif-site-footer a:focus-visible{outline:3px solid #E8B33A;outline-offset:3px}
+@media(min-width:768px){#ralif-site-footer .ralif-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#ralif-site-header .ralif-header-btn{display:inline-flex}}
+@media(min-width:1024px){#ralif-site-header .ralif-desktop-nav{display:flex}#ralif-site-header .ralif-menu-toggle{display:none}#ralif-site-header .ralif-contact-band{display:block}#ralif-site-footer .ralif-footer-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:1023px){#ralif-site-header .ralif-drop-menu-wide{min-width:280px;width:280px;column-count:1}}
+@media(max-width:767px){#ralif-site-header .ralif-header-main{padding:0 20px}#ralif-site-footer .ralif-footer-grid{padding:64px 20px;gap:32px}#ralif-site-footer .ralif-footer-bottom-inner{padding:20px;align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){#ralif-site-header *{transition:none!important;scroll-behavior:auto!important}}
