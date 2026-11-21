@@ -1,0 +1,29 @@
+# Ralif Engenharia — site estático em Apache/cPanel
+# Arquivo de índice principal: o repositório contém "Index.html" com I maiúsculo.
+DirectoryIndex Index.html index.html index.htm
+
+# Permite acesso público aos arquivos do site em Apache 2.4+.
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+# Compatibilidade com instalações Apache 2.2 antigas.
+<IfModule mod_access_compat.c>
+    Order allow,deny
+    Allow from all
+</IfModule>
+
+# Faz links antigos para /index.html funcionarem em hospedagem Linux,
+# mesmo que o arquivo real esteja nomeado como /Index.html.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^index\.html$ Index.html [NC,L]
+</IfModule>
+
+# Entrega os arquivos de texto do site em UTF-8 e reconhece formatos usados.
+<IfModule mod_mime.c>
+    AddDefaultCharset UTF-8
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+    AddType font/woff2 .woff2
+</IfModule>
