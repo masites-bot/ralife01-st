@@ -133,12 +133,12 @@ header[data-safe-area-sticky-top] aside p{
   color:#5B6472!important;
 }
 @media(max-width:900px){
-  .max-w-\\[1200px\\]{
+  .max-w-\[1200px\]{
     width:100%;
     max-width:1200px;
   }
-  main>.max-w-\\[1200px\\],
-  main>section>.max-w-\\[1200px\\]{
+  main>.max-w-\[1200px\],
+  main>section>.max-w-\[1200px\]{
     width:100%;
     max-width:1200px;
   }
@@ -182,7 +182,7 @@ header[data-safe-area-sticky-top] aside p{
   }
 }
 @media(max-width:480px){
-  main .max-w-\\[1200px\\]{
+  main .max-w-\[1200px\]{
     padding-left:18px;
     padding-right:18px;
   }
