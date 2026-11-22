@@ -11,7 +11,7 @@ function text_length(string $value): int {
 function lower_text(string $value): string {
     return function_exists('mb_strtolower') ? mb_strtolower($value, 'UTF-8') : strtolower($value);
 }
-function reply(int $status, array $payload): never {
+function reply(int $status, array $payload): void {
     http_response_code($status);
     echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
