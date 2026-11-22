@@ -72,5 +72,17 @@
       "legacy_alias": "Artigo-64-Data-Centers.html continua redirecionando para Artigo-106-Data-Centers.html.",
       "verified_on": "2026-11-22"
     }
-  ]
+  ],
+  "local_preview": {
+    "date": "2026-11-22",
+    "pages_with_shared_shell_assets": 106,
+    "scope": "All complete HTML pages with file size above 2 KB, excluding the React Index.html, which keeps its native header/footer.",
+    "assets": "ralif-site-shell.css and ralif-site-shell.js are linked directly from each HTML file so file:// previews work without Apache/PHP.",
+    "legacy_home_fixes": [
+      "Home.html",
+      "Home-Nova.html"
+    ],
+    "server_compatibility": "serve-page.php detects existing links and does not inject duplicate assets when requests use Apache routing.",
+    "note": "Direct file:// previews render navigation and footer; PHP form delivery still requires a PHP-enabled web server."
+  }
 }
