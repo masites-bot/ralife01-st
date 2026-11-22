@@ -40,9 +40,16 @@ if($html===false){http_response_code(500);exit('Não foi possível carregar esta
 header('Content-Type:text/html; charset=utf-8');header('X-Content-Type-Options:nosniff');header('Cache-Control:public, max-age=60');
 $isRedirect=preg_match('/http-equiv\s*=\s*["\']?refresh/i',$html)===1;
 $isIndex=strcasecmp(basename($filePath),'Index.html')===0;
-if($isRedirect||$isIndex||strlen($html)<2000){echo $html;exit;}
-$css='<link rel="stylesheet" href="ralif-site-shell.css?v=20261121">';
-$js='<script src="ralif-site-shell.js?v=20261121" defer></script>';
+if($isRedirect||strlen($html)<2000){echo $html;exit;}
+$css='<link rel="stylesheet" href="ralif-site-shell.css?v=20261122">';
+if($isIndex){
+$html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);
+$indexJs='<script src="ralif-index-fixes.js?v=20261122" defer></script>';
+$html=preg_replace('/<\/body\s*>/i',$indexJs.'</body>',$html,1,$bodyCount);
+if(($headCount??0)!==1||($bodyCount??0)!==1){error_log('Ralif index fixes: estrutura head/body ausente');echo $html;exit;}
+echo $html;exit;
+}
+$js='<script src="ralif-site-shell.js?v=20261122" defer></script>';
 $html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);
 $html=preg_replace('/<\/body\s*>/i',$js.'</body>',$html,1,$bodyCount);
 if(($headCount??0)!==1||($bodyCount??0)!==1){error_log('Ralif shell: estrutura head/body ausente em '.basename($filePath));echo $html;exit;}
