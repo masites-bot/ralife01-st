@@ -1,6 +1,6 @@
 {
-  "html_files": 168,
-  "article_files_including_redirects": 144,
+  "html_files": 251,
+  "article_files_including_redirects": 201,
   "duplicate_redirects": {
     "Artigo-64-Data-Centers.html": "Artigo-106-Data-Centers.html",
     "Artigo-100-Aeroportos.html": "Artigo-56-Aeroportos.html",
@@ -16,7 +16,7 @@
     "Artigo-57-Shopping.html": "Artigo-99-Shoppings.html",
     "Artigo-47-Lavanderias.html": "Artigo-112-Lavanderias.html"
   },
-  "missing_article_129": true,
+  "missing_article_129": false,
   "assets": [
     "Projeto de Impermeabilização Guarda corpo.png",
     "Projeto de impermeabilização jardim suspenso.png",
@@ -28,5 +28,40 @@
     "logo_cinza.png",
     "projeto de impermeabilização para areas de jardins.png"
   ],
-  "file_count": 183
+  "file_count": 294,
+  "audit_date": "2026-11-22",
+  "public_html_files": 250,
+  "project_page_files": 15,
+  "category_files": 6,
+  "tag_legacy_redirect_files": 21,
+  "unique_html_content_blobs": 212,
+  "duplicate_html_content_groups": 19,
+  "duplicate_html_files_in_groups": 58,
+  "repository_file_count": 294,
+  "site_shell": {
+    "reference": "Index.html",
+    "shared_files": [
+      "serve-page.php",
+      "ralif-site-shell.css",
+      "ralif-site-shell.js"
+    ],
+    "home_fixes": [
+      "ralif-index-fixes.js"
+    ],
+    "routing": "Apache .htaccess routes /, /index.html, /actions and all secondary HTML pages through the PHP shell",
+    "form_endpoint": "/actions",
+    "contact_recipient": "sac@projetodeimpermeabilizacao.com.br",
+    "delivery_note": "PHP mail() relies on the hosting server mail transport; successful delivery must be confirmed with a real form submission after deployment."
+  },
+  "cleanup": {
+    "removed": [
+      "Index-atualizado_3.css — exact duplicate of Index-atualizado_2.css"
+    ],
+    "preserved": [
+      "legacy article redirects",
+      "tag URL redirects",
+      "historical CSS snapshots"
+    ],
+    "reason": "Preserved old URLs to avoid breaking inbound links and search indexing. Removed only the confirmed duplicate."
+  }
 }
