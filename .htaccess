@@ -1,32 +1,26 @@
-# Ralif Engenharia — site estático em Apache/cPanel
-# Arquivo de índice principal: o repositório contém "Index.html" com I maiúsculo.
+# Ralif Engenharia — Apache/cPanel
+# A página inicial oficial é Index.html, servida com a camada de correção responsiva.
 DirectoryIndex Index.html index.html index.htm
 
-# Permite acesso público aos arquivos do site em Apache 2.4+.
 <IfModule mod_authz_core.c>
     Require all granted
 </IfModule>
-
-# Compatibilidade com instalações Apache 2.2 antigas.
 <IfModule mod_access_compat.c>
     Order allow,deny
     Allow from all
 </IfModule>
 
-# Faz links antigos para /index.html funcionarem em hospedagem Linux,
-# mesmo que o arquivo real esteja nomeado como /Index.html.
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    # API usada pelo formulário de contato.
-    RewriteRule ^actions/?$ actions.php [L,QSA]
-    # A home oficial permanece em Index.html e não recebe um segundo cabeçalho/rodapé.
-    RewriteRule ^index\.html$ Index.html [NC,L]
-    # As demais páginas HTML usam o shell compartilhado aprovado.
-    RewriteCond %{REQUEST_URI} !^/Index\.html$ [NC]
+    # Endpoint do formulário: /actions -> actions.php
+    RewriteRule ^actions/?$ actions.php [END,QSA]
+    # Home: preserva o cabeçalho/rodapé React oficial e injeta só as correções globais.
+    RewriteRule ^$ serve-page.php?file=Index.html [END,QSA]
+    RewriteRule ^index\.html$ serve-page.php?file=Index.html [NC,END,QSA]
+    # Todas as páginas HTML secundárias recebem o mesmo menu e rodapé.
     RewriteRule ^(.+\.html)$ serve-page.php?file=$1 [END,QSA]
 </IfModule>
 
-# Entrega os arquivos de texto do site em UTF-8 e reconhece formatos usados.
 <IfModule mod_mime.c>
     AddDefaultCharset UTF-8
     AddType image/webp .webp
