@@ -19,7 +19,7 @@ function fix(){
     }
   });
   document.querySelectorAll("footer p").forEach(function(p){
-    if(/Facebook\\s*[•·]\\s*Instagram\\s*[•·]\\s*Youtube/i.test(p.textContent||"")){
+    if(/Facebook\s*[•·]\s*Instagram\s*[•·]\s*Youtube/i.test(p.textContent||"")){
       p.textContent="Facebook • LinkedIn • YouTube";
     }
   });
