@@ -63,5 +63,14 @@
       "historical CSS snapshots"
     ],
     "reason": "Preserved old URLs to avoid breaking inbound links and search indexing. Removed only the confirmed duplicate."
-  }
+  },
+  "remediations": [
+    {
+      "file": "Artigo-106-Data-Centers.html",
+      "issue": "Arquivo estava em redirecionamento para si próprio (loop de redirecionamento), mostrando apenas 'Conteúdo atualizado'.",
+      "fix": "Conteúdo integral restaurado do histórico Git; menu e rodapé compartilhados incluídos por ralif-site-shell.css e ralif-site-shell.js.",
+      "legacy_alias": "Artigo-64-Data-Centers.html continua redirecionando para Artigo-106-Data-Centers.html.",
+      "verified_on": "2026-11-22"
+    }
+  ]
 }
