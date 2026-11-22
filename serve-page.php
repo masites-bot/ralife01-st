@@ -43,14 +43,14 @@ $isIndex=strcasecmp(basename($filePath),'Index.html')===0;
 if($isRedirect||strlen($html)<2000){echo $html;exit;}
 $css='<link rel="stylesheet" href="ralif-site-shell.css?v=20261122">';
 if($isIndex){
-$html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);
+if(strpos($html,'ralif-site-shell.css')===false)$html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);else $headCount=1;
 $indexJs='<script src="ralif-index-fixes.js?v=20261122" defer></script>';
-$html=preg_replace('/<\/body\s*>/i',$indexJs.'</body>',$html,1,$bodyCount);
+if(strpos($html,'ralif-index-fixes.js')===false)$html=preg_replace('/<\/body\s*>/i',$indexJs.'</body>',$html,1,$bodyCount);else $bodyCount=1;
 if(($headCount??0)!==1||($bodyCount??0)!==1){error_log('Ralif index fixes: estrutura head/body ausente');echo $html;exit;}
 echo $html;exit;
 }
 $js='<script src="ralif-site-shell.js?v=20261122" defer></script>';
-$html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);
-$html=preg_replace('/<\/body\s*>/i',$js.'</body>',$html,1,$bodyCount);
+if(strpos($html,'ralif-site-shell.css')===false)$html=preg_replace('/<\/head\s*>/i',$css.'</head>',$html,1,$headCount);else $headCount=1;
+if(strpos($html,'ralif-site-shell.js')===false)$html=preg_replace('/<\/body\s*>/i',$js.'</body>',$html,1,$bodyCount);else $bodyCount=1;
 if(($headCount??0)!==1||($bodyCount??0)!==1){error_log('Ralif shell: estrutura head/body ausente em '.basename($filePath));echo $html;exit;}
 echo $html;
