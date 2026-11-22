@@ -4,7 +4,10 @@
   const HOME="index.html#/", CONTACT="index.html#/contato", BLOG="blog.html";
   const WA="https://wa.me/5511995566563?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20sobre%20projeto%20de%20impermeabiliza%C3%A7%C3%A3o";
   const EMAIL="sac@projetodeimpermeabilizacao.com.br", P1="(11) 99556-6563", P2="(11) 94933-1470";
-  const ADDRESS="Rua Francisco Bellazzi, N° 244 Jd. Jaraguá São Paulo", SOCIAL="https://projetodeimpermeabilizacao.blog.br/";
+  const ADDRESS="Rua Francisco Bellazzi, N° 244 Jd. Jaraguá São Paulo";
+  const FACEBOOK="https://pt-br.facebook.com/Ralifeengenharia/";
+  const LINKEDIN="https://br.linkedin.com/company/ralife-engenharia";
+  const YOUTUBE="https://www.youtube.com/@RALIFEENGENHARIA";
   const projects=[
     ["01 — Lajes de Cobertura","index.html#/projeto/lajes-de-cobertura"],
     ["02 — Paredes de Contenção","index.html#/projeto/paredes-de-contencao"],
@@ -61,7 +64,7 @@
       '<div><h3>Menu</h3><span class="ralif-footer-bar"></span><nav class="ralif-footer-links">'+list(topics)+'</nav></div>'+
       '<div><h3>Links</h3><span class="ralif-footer-bar"></span><nav class="ralif-footer-links">'+list([["Quem somos","quem-somos.html"],["Consultoria","consultoria.html"],["Contatos",CONTACT],["Projetos","index.html#/projetos"],["Serviços","index.html#/servicos"],["Blog",BLOG]])+'</nav></div>'+
       '<div><h3>Localização</h3><span class="ralif-footer-bar"></span><p class="ralif-footer-location">'+ADDRESS+'</p><h3 class="ralif-footer-subtitle">Contatos</h3><span class="ralif-footer-bar"></span><nav class="ralif-footer-links"><a href="mailto:'+EMAIL+'">'+EMAIL+'</a><a href="tel:+5511995566563">'+P1+'</a><a href="tel:+5511949331470">'+P2+'</a></nav></div>'+
-      '<div><h3>Siga-nos nas Redes Sociais</h3><span class="ralif-footer-bar"></span><div class="ralif-footer-social"><a href="'+SOCIAL+'" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="'+SOCIAL+'" target="_blank" rel="noopener" aria-label="Instagram">◎</a><a href="'+SOCIAL+'" target="_blank" rel="noopener" aria-label="Youtube">▶</a></div><p class="ralif-footer-social-label">Facebook • Instagram • Youtube</p><a class="ralif-footer-whatsapp" href="'+WA+'" target="_blank" rel="noopener">WhatsApp • '+P1+'</a><p class="ralif-footer-small-links"><a href="index.html#/sitemap">Mapa do site</a> • <a href="'+BLOG+'">Blog</a></p></div>'+
+      '<div><h3>Siga-nos nas Redes Sociais</h3><span class="ralif-footer-bar"></span><div class="ralif-footer-social"><a href="'+FACEBOOK+'" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="'+LINKEDIN+'" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="'+YOUTUBE+'" target="_blank" rel="noopener" aria-label="YouTube">▶</a></div><p class="ralif-footer-social-label">Facebook • LinkedIn • YouTube</p><a class="ralif-footer-whatsapp" href="'+WA+'" target="_blank" rel="noopener">WhatsApp • '+P1+'</a><p class="ralif-footer-small-links"><a href="index.html#/sitemap">Mapa do site</a> • <a href="'+BLOG+'">Blog</a></p></div>'+
       '</div><div class="ralif-footer-bottom"><div class="ralif-footer-bottom-inner"><span>Powered by Projeto de Impermeabilização</span><span class="ralif-footer-bottom-links"><a href="index.html#/politicas-privacidade">Políticas de Privacidade</a><a href="index.html#/termos-de-uso">Termos de Uso</a></span></div></div></footer>';
   }
   function install(){
